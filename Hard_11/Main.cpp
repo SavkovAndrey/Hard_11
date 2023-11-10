@@ -26,6 +26,7 @@ int main()
 {
 	setlocale(LC_ALL, "RU");
 
+	Znak book[8];
 
 
 
