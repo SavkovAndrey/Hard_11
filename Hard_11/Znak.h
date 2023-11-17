@@ -10,4 +10,6 @@ struct Znak
 	Znak(Znak& other);                               // Конструктор копирования
 	~Znak();                                         // ДЕструктор
 
+	void InputData(string name, int bday[]);         // Ввод информации
+	void OutputData();                               // Вывод всего списка
 };

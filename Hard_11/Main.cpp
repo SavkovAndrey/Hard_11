@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include "Znak.h"
+#include <string>
 using namespace std;
 
 //------------------------- ЗАДАНИЕ
@@ -20,6 +21,10 @@ using namespace std;
 - упорядочивание записей по знакам Зодиака;
 */
 
+//------------------------- ПРОТОТИПЫ
+
+void menu();
+
 //------------------------- Main
 
 int main()
@@ -28,8 +33,76 @@ int main()
 
 	Znak book[8];
 
+	while (true)
+	{
+		menu();
+		int n;
+		cin >> n;
 
+		switch (n)
+		{
+		     case 1:
+			{
+				 string temp_name;
+				 int temp_bday[3]{};
+				 for (int i = 0; i < 8; i++)
+				 {
+					 cout << i + 1 << "-й человек:" << endl;
+					 cout << "Введите имя и фамилию через пробел: ";
+					 getline(cin, temp_name);
+
+					 cout << "Введите дату рождения:" << endl;
+					 cout << "Число: ";
+					 cin >> temp_bday[0];
+					 cout << "Месяц: ";
+					 cin >> temp_bday[1];
+					 cout << "Год: ";
+					 cin >> temp_bday[2];
+
+					 book[i].InputData(temp_name, temp_bday);
+				 }
+			break;
+			}
+
+			 case 2:
+			 {
+				 cout << "Вывод на экран всего списка:" << endl;
+				 for (int i = 0; i < 8; i++)
+				 {
+					 book[i].OutputData();
+			     }
+				 break;
+			 }
+
+			 case 0:
+			 {
+				 cout << endl << "Вы вышли из программы." << endl;
+				 system("pause");
+				 return 0;
+				 break;
+			 }
+		}
+
+	}
 
 	system("pause");
 	return 0;
+}
+
+//------------------------- ФУНКЦИИ
+
+void menu()
+{
+	cout << endl;
+	cout << endl << "ВОЗМОЖНЫЕ ДЕЙСТВИЯ:" << endl;;
+	cout << endl << "1 - Вввод массива book (состоящего из восьми персон)";
+	cout << endl << "2 - Вывод всего списка на экран";
+	cout << endl << "3 - удаление элемента по номеру";
+	cout << endl << "4 - сравнить массивы по элементно";
+	cout << endl << "5 - взять элемент с заданным индексом";
+	cout << endl << "6 - найти номер элемента по значению (первого встретившегося)";
+	cout << endl << "7 - провести сортировку массива по возрастанию";
+	cout << endl << "0 - выйти из программы";
+	cout << endl;
+	cout << endl << "Выберете действие:";
 }
