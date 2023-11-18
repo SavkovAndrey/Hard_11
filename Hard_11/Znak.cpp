@@ -1,5 +1,7 @@
-#include <iostream>
 #include "Znak.h"
+#include <iostream>
+#include <iomanip>
+#include <string>
 using namespace std;
 
 //------------------------- ÊÎÍÑÒÐÓÊÒÎÐ ÏÎ ÓÌÎË×ÀÍÈÞ
@@ -44,7 +46,6 @@ Znak::~Znak()
 }
 
 //------------------------- ÂÂÎÄ ÈÍÔÎÐÌÀÖÈÈ 
-
 void Znak::InputData(string name, int bday[])
 {
 	this->name = name;
@@ -71,7 +72,9 @@ void Znak::InputData(string name, int bday[])
 
 void Znak::OutputData()
 {
-	cout << name << "\t" << zodiac << "\t" << bday[0] << "." << bday[1] << "." << bday[2] << endl;
+	cout << setw(20) << name << setw(10) << zodiac << "\t" << bday[0] << "." << bday[1] << "." << bday[2] << endl;
 }
 
 //-------------------------
+/*
+*/

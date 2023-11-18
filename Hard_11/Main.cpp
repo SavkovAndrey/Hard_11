@@ -32,7 +32,6 @@ int main()
 	setlocale(LC_ALL, "RU");
 
 	Znak book[8];
-
 	while (true)
 	{
 		menu();
@@ -49,8 +48,9 @@ int main()
 				 {
 					 cout << i + 1 << "-й человек:" << endl;
 					 cout << "Введите имя и фамилию через пробел: ";
+					 cin.get();
 					 getline(cin, temp_name);
-
+				
 					 cout << "Введите дату рождения:" << endl;
 					 cout << "Число: ";
 					 cin >> temp_bday[0];
@@ -67,6 +67,7 @@ int main()
 			 case 2:
 			 {
 				 cout << "Вывод на экран всего списка:" << endl;
+				 cout << setw(20) << "Имя фамилия" << setw(10) << "Знак\t" << "Дата" << endl;
 				 for (int i = 0; i < 8; i++)
 				 {
 					 book[i].OutputData();
@@ -84,7 +85,6 @@ int main()
 		}
 
 	}
-
 	system("pause");
 	return 0;
 }
@@ -106,3 +106,6 @@ void menu()
 	cout << endl;
 	cout << endl << "Выберете действие:";
 }
+
+	/*
+	*/
