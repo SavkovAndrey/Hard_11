@@ -75,6 +75,5 @@ void Znak::OutputData()
 	cout << setw(20) << name << setw(10) << zodiac << "\t" << bday[0] << "." << bday[1] << "." << bday[2] << endl;
 }
 
-//-------------------------
-/*
-*/
+//------------------------- 
+
