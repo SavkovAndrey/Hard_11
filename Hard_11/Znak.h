@@ -15,6 +15,5 @@ struct Znak
 	~Znak();                                         // ДЕструктор
 	void InputData(string name, int bday[]);         // Ввод информации
 	void OutputData();                               // Вывод всего списка
-	/*
-	*/
+	int ValueZnak();                                 // Возвращает знак в виде цифры (для сортировки)
 	};

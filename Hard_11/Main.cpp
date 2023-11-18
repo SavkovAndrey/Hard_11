@@ -24,6 +24,7 @@ using namespace std;
 //------------------------- ПРОТОТИПЫ
 
 void menu();
+void sort(Znak book[]);
 
 //------------------------- Main
 
@@ -97,6 +98,13 @@ int main()
 				 break;
 			 }
 
+			 case 4:
+			 {
+				 cout << "Производится сортировка записей по знаку зодиака!" << endl;
+				 sort(book);
+				 break;
+			 }
+
 			 case 0:
 			 {
 				 cout << endl << "Вы вышли из программы." << endl;
@@ -126,5 +134,19 @@ void menu()
 	cout << endl << "Выберете действие:";
 }
 
-	/*
-	*/
+void sort(Znak book[])
+{
+	Znak temp;
+	for (int i = 0; i < 8; i++)
+	{
+		for (int j = 0; j < 7; j++)
+		{
+			if (book[j].ValueZnak() > book[j + 1].ValueZnak())
+			{
+				temp = book[j + 1];
+				book[j + 1] = book[j];
+				book[j] = temp;
+			}
+		}
+	}
+}

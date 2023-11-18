@@ -75,5 +75,22 @@ void Znak::OutputData()
 	cout << setw(20) << name << setw(10) << zodiac << "\t" << bday[0] << "." << bday[1] << "." << bday[2] << endl;
 }
 
-//------------------------- 
+//------------------------- ЦИФРА ВМЕСТО ЗНАКА
+
+int Znak::ValueZnak()
+{
+	     if (zodiac ==  "Водолей") return 1;
+	else if (zodiac ==     "Рыбы") return 2;
+	else if (zodiac ==     "Овен") return 3;
+	else if (zodiac ==    "Телец") return 4;
+	else if (zodiac == "Близнецы") return 5;
+	else if (zodiac ==      "Рак") return 6;
+	else if (zodiac ==      "Лев") return 7;
+	else if (zodiac ==     "Дева") return 8;
+	else if (zodiac ==     "Весы") return 9;
+	else if (zodiac == "Скорпион") return 10;
+	else if (zodiac ==  "Стрелец") return 11;
+	else if (zodiac ==  "Козерог") return 12;
+		 return 0;
+}
 
